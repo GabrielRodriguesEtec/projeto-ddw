@@ -80,7 +80,7 @@ header ul li a:hover {
 
 .banner {
   width: 100%;
-  height: 400px;
+  height: 600px;
   background-image: url("img/00.jpg");
   background-size: cover;
   background-position: center;
@@ -178,17 +178,14 @@ footer a:hover {
   display: block;
   margin: 0 auto;
   width: max-content;
-  padding-bottom: 3px;
-  border-bottom: 2px solid transparent;
   transition: 0.5s;
 }
 
 #copyright:hover {
-  border-bottom: 2px solid #7f0516;
   color: #7f0516;
 }
 
-@media  screen and(max-width: 720px) {
+@media only screen and (max-width: 768px) {
   header h1 {
     width: 100%;
   }
