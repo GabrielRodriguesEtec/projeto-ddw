@@ -184,7 +184,8 @@ footer a:hover {
 }
 
 #copyright:hover {
-  border-bottom: 2px solid #4e0606;
+  border-bottom: 2px solid #7f0516;
+  color: #7f0516;
 }
 
 @media  screen and(max-width: 720px) {
@@ -194,5 +195,12 @@ footer a:hover {
 
   header ul li {
     float: none;
+    display: block;
+  }
+
+  header ul li a {
+    display: block;
+    width: 100%;
+    text-align: left;
   }
 }
