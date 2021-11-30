@@ -193,6 +193,11 @@ footer a:hover {
     width: 100%;
   }
 
+  header nav {
+    width: 100%;
+    float: none;
+  }
+
   header ul li {
     float: none;
     display: block;
