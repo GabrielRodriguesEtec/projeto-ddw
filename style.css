@@ -26,15 +26,6 @@ header {
   background-color: #FFF;
   padding: 0.5rem;
   overflow: hidden;
-  /*border-radius: 3px;
-  height: max-content;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;*/
   box-shadow: 0 0 4px #bebebe;
   position: fixed;
   width: 100%;
@@ -54,6 +45,7 @@ header .container {
 
 header h1 {
   margin: 0 1rem;
+  width: 200px;
 }
 
 header nav {
@@ -66,7 +58,7 @@ header nav ul {
 }
 
 header ul li {
-  float: right;
+  float: left;
 }
 
 header ul li a {
@@ -100,7 +92,7 @@ header ul li a:hover {
   max-width: 400px;
   width: 95%;
   min-height: 200px;
-  margin: 1rem 2rem 0.5rem 1rem;
+  margin: 2.5rem 2rem 0.5rem 1rem;
   background: linear-gradient(30deg, #8b0909, #5f0202);
   border-radius: 12px;
   box-shadow: 0 0 4px #D5D5D5;
@@ -159,7 +151,7 @@ section a:hover {
 }
 
 footer {
-  background: #2e0000;
+  background: #1a1a1a;
   padding: 2rem;
 }
 
@@ -177,7 +169,7 @@ footer a {
 }
 
 footer a:hover {
-  color: hsl(0, 63%, 50%);
+  color: #d02f2f;
 }
 
 #copyright {
@@ -186,4 +178,21 @@ footer a:hover {
   display: block;
   margin: 0 auto;
   width: max-content;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+  transition: 0.5s;
+}
+
+#copyright:hover {
+  border-bottom: #d02f2f;
+}
+
+@media  screen and(max-width: 720px) {
+  header h1 {
+    width: 100%;
+  }
+
+  header ul li a {
+    display: block;
+  }
 }
