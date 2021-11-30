@@ -10,7 +10,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #37AA9C;
+  color: #5f0202;
 }
 
 a {
@@ -35,6 +35,7 @@ header {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;*/
+  box-shadow: 0 0 4px #bebebe;
   position: fixed;
   width: 100%;
 }
@@ -52,7 +53,6 @@ header .container {
 }
 
 header h1 {
-  color: #475856;
   margin: 0 1rem;
 }
 
@@ -70,34 +70,38 @@ header ul li {
 }
 
 header ul li a {
-  color: #18675D;
+  color: #7f0516;
   padding: 1rem;
   transition: 0.5s;
 }
 
 header ul li a:hover {
-  background: #36766E;
+  background: #d31010;
   color: #FFF;
 }
 
 .container {
   width: 97%;
-  max-width: 1024px;
+  max-width: 1680px;
   margin: 0 auto;
 }
 
 .banner {
   width: 100%;
   height: 400px;
-  background: #D7D7D7;
-  max-width: 1024px;
+  background-image: url("img/01.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 1680px;
 }
 
 .card {
-  width: 400px;
+  max-width: 400px;
+  width: 95%;
   min-height: 200px;
-  margin: 2rem 2rem 1rem 1rem;
-  background: linear-gradient(30deg, #E8E715, #4AB6BA);
+  margin: 1rem 2rem 0.5rem 1rem;
+  background: linear-gradient(30deg, #8b0909, #5f0202);
   border-radius: 12px;
   box-shadow: 0 0 4px #D5D5D5;
   margin-left: auto;
@@ -111,13 +115,13 @@ header ul li a:hover {
 }
 
 section {
-  width: 500px;
+  max-width: 800px;
+  width: 95%;
   margin: 4rem auto;
   text-align: center;
 }
 
 section h2 {
-  color: #36766E;
   margin-bottom: 4px;
 }
 
@@ -137,7 +141,7 @@ section p {
 }
 
 section a {
-  background: #3D6674;
+  background: #ec5151;
   padding: 0.5rem 1rem;
   color: #FFF;
   font-weight: bold;
@@ -150,12 +154,12 @@ section a {
 
 section a:hover {
   background: #F0F3F2;
-  color: #37776A;
-  box-shadow: 1px 1px 4px #80BEB1;
+  color: #4e0606;
+  box-shadow: 1px 1px 4px hsl(357, 52%, 56%);
 }
 
 footer {
-  background: #242424;
+  background: #2e0000;
   padding: 2rem;
 }
 
@@ -173,7 +177,7 @@ footer a {
 }
 
 footer a:hover {
-  color: #2F8DCE;
+  color: hsl(0, 63%, 50%);
 }
 
 #copyright {
