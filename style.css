@@ -27,8 +27,11 @@ header {
   padding: 0.5rem;
   overflow: hidden;
   box-shadow: 0 0 4px #bebebe;
-  position: fixed;
-  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: calc(100% - 1rem);
+  height: max-content;
 }
 
 header .container {
@@ -42,10 +45,11 @@ header .container {
   align-items: center;
   margin: 0 auto;
   background: #FFF;
+  padding: 0 1rem;
 }
 
 header h1 {
-  margin: 0 1rem;
+  margin-right: 1rem;
 }
 
 header nav {
@@ -72,6 +76,10 @@ header ul li a:hover {
   color: #FFF;
 }
 
+header ul li a:active {
+  background: #7E0A0A;
+}
+
 .container {
   width: 97%;
   max-width: 1680px;
@@ -81,11 +89,31 @@ header ul li a:hover {
 .banner {
   width: 100%;
   height: 600px;
-  background-image: url("img/00.jpg");
+  background-image: url("img/01.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   max-width: 1680px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.banner-content {
+  margin: 0 auto;
+  width: max-content;
+  color: #FFF;
+  text-shadow: 0 0 4px #4F4F4F;
+  text-align: center;
+}
+
+.banner-content h3 {
+  font-size: 25px;
+  color: #FFF;
 }
 
 .card {
@@ -93,7 +121,7 @@ header ul li a:hover {
   width: 95%;
   height: max-content;
   margin: 2.5rem 2rem 0.5rem 1rem;
-  background: linear-gradient(30deg, #8b0909, #5f0202);
+  background: linear-gradient(30deg, #8b0909, #C93030);
   border-radius: 12px;
   box-shadow: 0 0 4px #D5D5D5;
   margin-left: auto;
@@ -115,6 +143,13 @@ section {
 
 section h2 {
   margin-bottom: 4px;
+}
+
+section h1 {
+  text-align: left;
+  border-left: 3px solid #B61C1E;
+  padding-left: 0.5rem;
+  font-size: 30px;
 }
 
 section img {
@@ -150,31 +185,73 @@ section a {
 }
 
 section a:hover {
-  background: #F0F3F2;
+  background: #FFF;
   color: #4e0606;
   box-shadow: 1px 1px 4px hsl(357, 52%, 56%);
+}
+
+.section-video {
+  width: calc(100% - 2rem);
+  background: #1C9DB6;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.section-video-item {
+  width: 300px;
+  height: 140px;
+  background: #6DB8C7;
+  border-radius: 8px;
+  float: left;
+}
+
+.section-video p {
+  float: right;
+  width: calc(100% - (300px + 2rem));
+  padding: 1rem;
+  color: #FFF;
 }
 
 footer {
   background: #1a1a1a;
   padding: 2rem;
+  overflow: hidden;
 }
 
 footer ul {
   list-style: none;
+  float: left;
+  margin-right: 1rem;
+  border-left: 1px solid #FFF;
+  padding: 1rem;
 }
 
 footer li {
   padding: 0.3rem;
 }
 
-footer a {
+footer a,
+footer p {
   color: #FFF;
   transition: 0.5s;
 }
 
-footer a:hover {
+footer h2 {
+  color: #FFF;
+}
+
+footer a:hover,
+footer p:hover {
   color: #d02f2f;
+}
+
+.footer-content {
+  overflow: hidden;
+  width: max-content;
+}
+
+.footer-content i {
+  margin-right: 8px;
 }
 
 #copyright {
@@ -196,12 +273,17 @@ footer a:hover {
   width: max-content;
 }
 
-@media only screen and (max-width: 900px) {
+@media screen and (max-width: 900px) {
+
+  header {
+    padding: 1rem 0;
+  }
 
   header h1 {
     width: 100%;
     display: block;
     float: none;
+    text-align: center;
   }
 
   header nav {
@@ -211,11 +293,14 @@ footer a:hover {
 
   header .container {
     all: unset;
+    margin: 0;
+    width: 100%;
   }
 
   header ul li {
     float: none;
     display: block;
+    width: 100%;
   }
 
   header ul li a {
@@ -226,5 +311,21 @@ footer a:hover {
 
   .banner {
     height: 200px;
+  }
+
+  .card {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section-video-item {
+    width: 97%;
+    margin: 0 auto;
+    float: none;
+  }
+
+  .section-video p {
+    float: none;
+    width: 100%;
   }
 }
